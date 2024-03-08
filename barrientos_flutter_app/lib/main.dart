@@ -52,7 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
               Text(
                 'Initiate Nene Cortel Inc.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor),
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).primaryColor,
+                ),
               ),
               SizedBox(height: 20),
               Text(
