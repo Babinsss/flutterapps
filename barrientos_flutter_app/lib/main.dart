@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           secondary: Color.fromARGB(255, 228, 227, 227),
         ),
       ),
-      home: MyHomePage(title: 'My Responsive App'),
+      home: MyHomePage(title: 'LonaLoans Inc.'),
     );
   }
 }
@@ -41,6 +41,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color.fromARGB(255, 6, 38, 220), Color(0xFF536DFE)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -49,14 +58,24 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               SizedBox(height: 40),
-              Text(
-                'Initiate Nene Cortel Inc.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).primaryColor,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/Lona.jpg', // Replace with your logo image
+                    height: 100,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'LonaLoans Inc.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 20),
               Text(
@@ -77,7 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: 'User',
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
                           ),
                           style: TextStyle(fontSize: 16),
                           validator: (value) {
@@ -92,7 +113,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           obscureText: true,
                           decoration: InputDecoration(
                             labelText: 'Password',
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey),
+                            ),
                           ),
                           style: TextStyle(fontSize: 16),
                           validator: (value) {
@@ -133,11 +156,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             );
                           },
-                          style: ElevatedButton.styleFrom(
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              side: BorderSide(color: Colors.grey),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.white,
+                            ),
+                            shape: MaterialStateProperty.all<OutlinedBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                side: BorderSide(color: Colors.grey),
+                              ),
                             ),
                           ),
                           icon: Image.asset(
@@ -146,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           label: Text(
                             'Login with Google',
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(fontSize: 16, color: Colors.black),
                           ),
                         ),
                         SizedBox(height: 16),
@@ -159,11 +186,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             );
                           },
-                          style: ElevatedButton.styleFrom(
-                            elevation: 0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              side: BorderSide(color: Colors.grey),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Colors.white,
+                            ),
+                            shape: MaterialStateProperty.all<OutlinedBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                side: BorderSide(color: Colors.grey),
+                              ),
                             ),
                           ),
                           icon: Image.asset(
@@ -172,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           label: Text(
                             'Login with Facebook',
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(fontSize: 16, color: Colors.black),
                           ),
                         ),
                         SizedBox(height: 16),
@@ -201,7 +232,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   }
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Theme.of(context).primaryColor,
+                                  elevation: 0,
+                                  backgroundColor:
+                                      Theme.of(context).primaryColor,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8),
                                   ),
@@ -212,7 +245,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                   child: Text(
                                     'Login',
-                                    style: TextStyle(fontSize: 16),
+                                    style: TextStyle(
+                                        fontSize: 16, color: Colors.white),
                                   ),
                                 ),
                               ),
