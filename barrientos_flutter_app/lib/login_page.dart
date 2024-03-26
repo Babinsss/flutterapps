@@ -70,7 +70,8 @@ class loginPage extends StatelessWidget {
                 style: TextStyle(color: Color.fromARGB(255, 8, 8, 232))),
           ),
         ),
-        Text('Or sign in with:'),
+        Text('Or sign in with:',
+        style: TextStyle(color: Colors.white),),
         ElevatedButton(
             onPressed: () {
               print('google is clicked');
