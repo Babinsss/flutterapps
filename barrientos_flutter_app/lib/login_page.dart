@@ -70,8 +70,10 @@ class loginPage extends StatelessWidget {
                 style: TextStyle(color: Color.fromARGB(255, 8, 8, 232))),
           ),
         ),
-        Text('Or sign in with:',
-        style: TextStyle(color: Colors.white),),
+        Text(
+          'Or sign in with:',
+          style: TextStyle(color: Colors.white),
+        ),
         ElevatedButton(
             onPressed: () {
               print('google is clicked');
@@ -86,6 +88,9 @@ class loginPage extends StatelessWidget {
                 Text('Log in with Google'),
               ],
             )),
+        SizedBox(
+          height: 10,
+        ),
         ElevatedButton(
             onPressed: () {
               print('Facebook is clicked');
