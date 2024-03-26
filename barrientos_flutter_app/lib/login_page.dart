@@ -13,7 +13,8 @@ class loginPage extends StatelessWidget {
             style: TextStyle(
                 color: const Color.fromARGB(255, 255, 255, 255),
                 fontSize: 22,
-                fontWeight: FontWeight.bold)),
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Urbanist')),
         SizedBox(height: 16),
         Text(
           'Login to Continue',
